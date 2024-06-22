@@ -58,7 +58,7 @@ def limpiarPantalla():
 
 
 def mostrarMenuIni():
-    print("Elija alguna opción: 1,2,3,4 o 5")
+    print("Elija alguna opción: 1,2,3,4 o 0 para salir")
     print("1- Listar películas")
     print("2- Agregar película")
     print("3- Modificar película")

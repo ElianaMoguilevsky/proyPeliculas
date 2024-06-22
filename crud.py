@@ -132,17 +132,12 @@ def modificarPeliculas(peliculas):
     
     utiles.mostrarFinFuncion()
     
-
-
-
-
 """Función que busca películas por algún campo"""
 def findPeliculas(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
     utiles.mostrarSubTitulo("Buscar Películas", "-")
     
-
     op=utiles.mostrarMenuBusqueda()
 
     while op!=0:
@@ -156,6 +151,13 @@ def findPeliculas(peliculas):
             findPeliculasPorActor(peliculas)
         elif op==5:
             findPeliculasPorGenero(peliculas)
+
+    op=utiles.mostrarMenuBusqueda()            
+
+    if op==0:
+        utiles.limpiarPantalla()
+        utiles.mostrarTitulo("Bienvenidos a la página de películas", "*")
+        utiles.mostrarMenuIni()     
    
 def findPeliculasPorTitulo(peliculas):
     # limpio pantalla y muestro título
@@ -172,12 +174,13 @@ def findPeliculasPorTitulo(peliculas):
     campo_a_buscar=(input("Ingrese el texto buscado: ").lower())
     peliEncontrada=False
     cont=0
-
+    print("+------+-----------------------+------------+-------+--------------------+")
+    print("|  Id  |        Titulo         | Puntuación |  Año  |      Director      |")
+    print("+------+-----------------------+------------+-------+--------------------+")
     for peli in peliculas:
         if campo_a_buscar in peli["titulo"].lower():
             peliEncontrada=True
             cont+=1
-            print(" ")
             print(f'| {peli["id"]:4} | {peli["titulo"]:{max_ancho_titulo}} | {peli["puntuacion"]:10} | {peli["anio"]:10} | {peli["director"]:{max_ancho_director}} |')
             if peliEncontrada==False:
                print(f'Pelicula con título original"{campo_a_buscar}" no encontrada')
@@ -188,14 +191,14 @@ def findPeliculasPorTitulo(peliculas):
     print("-"*55)   
           
     utiles.mostrarFinFuncion()
-
+    utiles.limpiarPantalla()
+    utiles.mostrarMenuBusqueda()
 
 def findPeliculasPorTituloOriginal(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
     utiles.mostrarSubTitulo("Buscar Películas", "-")
-    utiles.mostrarMenuBusqueda()
-
+   
     max_ancho_titulo = max(len(peli["titulo"]) for peli in peliculas)
     max_ancho_director = max(len(peli["director"]) for peli in peliculas)
    
@@ -206,12 +209,13 @@ def findPeliculasPorTituloOriginal(peliculas):
     campo_a_buscar=(input("Ingrese el texto buscado: ").lower())
     peliEncontrada=False
     cont=0
-
+    print("+------+-----------------------+------------+-------+--------------------+")
+    print("|  Id  |        Titulo         | Puntuación |  Año  |      Director      |")
+    print("+------+-----------------------+------------+-------+--------------------+")
     for peli in peliculas:
         if campo_a_buscar in peli["titulo_original"].lower():
             peliEncontrada=True
             cont+=1
-            print(" ")
             print(f'| {peli["id"]:4} | {peli["titulo"]:{max_ancho_titulo}} | {peli["puntuacion"]:10} | {peli["anio"]:10} | {peli["director"]:{max_ancho_director}} |')
             if peliEncontrada==False:
                print(f'Pelicula con título original "{campo_a_buscar}" no encontrada')
@@ -222,12 +226,13 @@ def findPeliculasPorTituloOriginal(peliculas):
     print("-"*55)   
           
     utiles.mostrarFinFuncion()
+    utiles.limpiarPantalla()
+    utiles.mostrarMenuBusqueda()
 
 def findPeliculasPorDirector(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
     utiles.mostrarSubTitulo("Buscar Películas", "-")
-    utiles.mostrarMenuBusqueda()
 
     max_ancho_titulo = max(len(peli["titulo"]) for peli in peliculas)
     max_ancho_director = max(len(peli["director"]) for peli in peliculas)
@@ -239,12 +244,13 @@ def findPeliculasPorDirector(peliculas):
     campo_a_buscar=(input("Ingrese el texto buscado: ").lower())
     peliEncontrada=False
     cont=0
-
+    print("+------+-----------------------+------------+-------+--------------------+")
+    print("|  Id  |        Titulo         | Puntuación |  Año  |      Director      |")
+    print("+------+-----------------------+------------+-------+--------------------+")
     for peli in peliculas:
         if campo_a_buscar in peli["director"].lower():
             peliEncontrada=True
             cont+=1
-            print(" ")
             print(f'| {peli["id"]:4} | {peli["titulo"]:{max_ancho_titulo}} | {peli["puntuacion"]:10} | {peli["anio"]:10} | {peli["director"]:{max_ancho_director}} |')
             if peliEncontrada==False:
                print(f'Pelicula con director "{campo_a_buscar}" no encontrada')
@@ -255,13 +261,13 @@ def findPeliculasPorDirector(peliculas):
     print("-"*55)   
           
     utiles.mostrarFinFuncion()
-
+    utiles.limpiarPantalla()
+    utiles.mostrarMenuBusqueda()
     
 def findPeliculasPorActor(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
     utiles.mostrarSubTitulo("Buscar Películas", "-")
-    utiles.mostrarMenuBusqueda()
 
     max_ancho_titulo = max(len(peli["titulo"]) for peli in peliculas)
     max_ancho_director = max(len(peli["director"]) for peli in peliculas)
@@ -273,12 +279,14 @@ def findPeliculasPorActor(peliculas):
     campo_a_buscar=(input("Ingrese el texto buscado: ").lower())
     peliEncontrada=False
     cont=0
-
+    print("+------+-----------------------+------------+-------+--------------------+")
+    print("|  Id  |        Titulo         | Puntuación |  Año  |      Director      |")
+    print("+------+-----------------------+------------+-------+--------------------+")
     for peli in peliculas:
-        if campo_a_buscar in peli["actores"].lower():
+        actores_minusculas = [actor.lower() for actor in peli["actores"]]
+        if campo_a_buscar in actores_minusculas:
             peliEncontrada=True
             cont+=1
-            print(" ")
             print(f'| {peli["id"]:4} | {peli["titulo"]:{max_ancho_titulo}} | {peli["puntuacion"]:10} | {peli["anio"]:10} | {peli["director"]:{max_ancho_director}} |')
             if peliEncontrada==False:
                print(f'Pelicula con director "{campo_a_buscar}" no encontrada')
@@ -289,12 +297,13 @@ def findPeliculasPorActor(peliculas):
     print("-"*55)   
           
     utiles.mostrarFinFuncion()
+    utiles.limpiarPantalla()
+    utiles.mostrarMenuBusqueda()
 
 def findPeliculasPorGenero(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
     utiles.mostrarSubTitulo("Buscar Películas", "-")
-    utiles.mostrarMenuBusqueda()
 
     max_ancho_titulo = max(len(peli["titulo"]) for peli in peliculas)
     max_ancho_director = max(len(peli["director"]) for peli in peliculas)
@@ -306,12 +315,14 @@ def findPeliculasPorGenero(peliculas):
     campo_a_buscar=(input("Ingrese el texto buscado: ").lower())
     peliEncontrada=False
     cont=0
-
+    print("+------+-----------------------+------------+-------+--------------------+")
+    print("|  Id  |        Titulo         | Puntuación |  Año  |      Director      |")
+    print("+------+-----------------------+------------+-------+--------------------+")
     for peli in peliculas:
-        if campo_a_buscar in peli["genero"].lower():
+        genero_minusculas = [genero.lower() for genero in peli["genero"]]
+        if campo_a_buscar in genero_minusculas:
             peliEncontrada=True
             cont+=1
-            print(" ")
             print(f'| {peli["id"]:4} | {peli["titulo"]:{max_ancho_titulo}} | {peli["puntuacion"]:10} | {peli["anio"]:10} | {peli["director"]:{max_ancho_director}} |')
             if peliEncontrada==False:
                print(f'Pelicula de género "{campo_a_buscar}" no encontrada')
@@ -322,8 +333,5 @@ def findPeliculasPorGenero(peliculas):
     print("-"*55)   
           
     utiles.mostrarFinFuncion()
-
-
-
-
-
+    utiles.limpiarPantalla()
+    utiles.mostrarMenuBusqueda()
