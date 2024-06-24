@@ -152,7 +152,7 @@ def findPeliculas(peliculas):
         elif op==5:
             findPeliculasPorGenero(peliculas)
 
-    op=utiles.mostrarMenuBusqueda()            
+        op=utiles.mostrarMenuBusqueda()            
 
     if op==0:
         utiles.limpiarPantalla()
@@ -192,8 +192,7 @@ def findPeliculasPorTitulo(peliculas):
           
     utiles.mostrarFinFuncion()
     utiles.limpiarPantalla()
-    utiles.mostrarMenuBusqueda()
-
+    
 def findPeliculasPorTituloOriginal(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
@@ -227,8 +226,7 @@ def findPeliculasPorTituloOriginal(peliculas):
           
     utiles.mostrarFinFuncion()
     utiles.limpiarPantalla()
-    utiles.mostrarMenuBusqueda()
-
+   
 def findPeliculasPorDirector(peliculas):
     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
@@ -262,7 +260,6 @@ def findPeliculasPorDirector(peliculas):
           
     utiles.mostrarFinFuncion()
     utiles.limpiarPantalla()
-    utiles.mostrarMenuBusqueda()
     
 def findPeliculasPorActor(peliculas):
     # limpio pantalla y muestro título
@@ -298,7 +295,6 @@ def findPeliculasPorActor(peliculas):
           
     utiles.mostrarFinFuncion()
     utiles.limpiarPantalla()
-    utiles.mostrarMenuBusqueda()
 
 def findPeliculasPorGenero(peliculas):
     # limpio pantalla y muestro título
@@ -334,4 +330,3 @@ def findPeliculasPorGenero(peliculas):
           
     utiles.mostrarFinFuncion()
     utiles.limpiarPantalla()
-    utiles.mostrarMenuBusqueda()

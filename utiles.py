@@ -66,7 +66,7 @@ def mostrarMenuIni():
     print("5- Buscar pelicula")
     print("0- Salir")
 
-    # el usuario ingresa la opcionción desada
+    # el usuario ingresa la opción desada
     opcion=int(input("Ingrese alguna opción: "))
     
     return opcion
@@ -80,7 +80,7 @@ def mostrarMenuBusqueda():
     print("5- Género")
     print("0- Volver al menú anterior")
 
-    # el usuario ingresa la opcionción desada
+    # el usuario ingresa la opción desada
     opcion=int(input("Ingrese alguna opción: "))
     
     return opcion
