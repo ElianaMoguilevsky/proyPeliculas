@@ -1,22 +1,14 @@
 [
     {
         "id": 1,
-        "titulo": "Cadena perpetua",
+        "titulo": "aaa",
         "titulo_original": "The Shawshank Redemption",
         "director": "Frank Darabont",
         "puntuacion": 87,
-        "genero": [
-            "Drama",
-            "Crimen"
-        ],
+        "genero": "Drama, Crimen",
         "anio": 1994,
         "sinopsis": "Acusado del asesinato de su mujer, Andrew Dufresne, tras ser condenado a cadena perpetua, es enviado a la prisi\u00c3\u00b3n de Shawshank. Con el paso de los a\u00c3\u00b1os conseguir\u00c3\u00a1 ganarse la confianza del director del centro y el respeto de sus compa\u00c3\u00b1eros presidiarios, especialmente de Red, el jefe de la mafia de los sobornos.",
-        "actores": [
-            "Tim Robbins",
-            "Morgan Freeman",
-            "Bob Gunton",
-            "William Sadler"
-        ],
+        "actores": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
         "duracion": "2h 23m"
     },
     {
@@ -25,18 +17,10 @@
         "titulo_original": "The Godfather",
         "director": "Francis Ford Coppola",
         "puntuacion": 87,
-        "genero": [
-            "Drama",
-            "Crimen"
-        ],
+        "genero": "Drama, Crimen",
         "anio": 1972,
         "sinopsis": "Don Vito Corleone, conocido dentro de los c\u00c3\u00adrculos del hampa como 'El Padrino', es el patriarca de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York en los a\u00c3\u00b1os cuarenta. Don Corleone tiene cuatro hijos: una chica, Connie, y tres varones; Sonny, Michael y Fredo. Cuando el Padrino reclina intervenir en el negocio de estupefacientes, empieza una cruenta lucha de violentos episodios entre las distintas familias del crimen organizado.",
-        "actores": [
-            "Marlon Brando",
-            "Al Pacino",
-            "James Caan",
-            "Robert Duvall"
-        ],
+        "actores": "Marlon Brando, Al Pacino, James Caan, Robert Duvall",
         "duracion": "2h 55m"
     },
     {
@@ -45,19 +29,10 @@
         "titulo_original": "Schindler's List",
         "director": "Steven Spielberg",
         "puntuacion": 86,
-        "genero": [
-            "Drama",
-            "Historia",
-            "B\u00c3\u00a9lica"
-        ],
+        "genero": "Drama, Historia, B\u00c3\u00a9lica",
         "anio": 1993,
         "sinopsis": "Oskar Schindler, un hombre de enorme astucia y talento para las relaciones p\u00c3\u00bablicas, organiza un ambicioso plan para ganarse la simpat\u00c3\u00ada de los nazis. Despu\u00c3\u00a9s de la invasi\u00c3\u00b3n de Polonia por los alemanes, consigue, gracias a sus relaciones con los nazis, la propiedad de una f\u00c3\u00a1brica de Cracovia. All\u00c3\u00ad emplea a cientos de operarios jud\u00c3\u00ados, cuya explotaci\u00c3\u00b3n le hace prosperar r\u00c3\u00a1pidamente. Su gerente, tambi\u00c3\u00a9n jud\u00c3\u00ado, es el verdadero director en la sombra, pues Schindler no tiene el menor conocimiento industrial.",
-        "actores": [
-            "Liam Neeson",
-            "Ben Kingsley",
-            "Ralph Fiennes",
-            "Caroline Goodall"
-        ],
+        "actores": "Liam Neeson, Ben Kingsley, Ralph Fiennes, Caroline Goodall",
         "duracion": "3h 15m"
     },
     {
@@ -69,12 +44,7 @@
         "genero": "Drama",
         "anio": 1957,
         "sinopsis": "Tras escuchar todos los testimonios y valorar las pruebas presentadas, un jurado popular compuesto por doce hombres tiene que decidir, por unanimidad, si absuelve o condena a muerte a un joven acusado de haber matado a su padre. Al principio, once est\u00c3\u00a1n completamente convencidos de su culpabilidad y se inclinan por la condena, pero el que discrepa empieza a plantear dudas razonables que, poco a poco, van resquebrajando la inicial seguridad de los dem\u00c3\u00a1s.",
-        "actores": [
-            "Martin Balsam",
-            "John Fiedler",
-            "Lee J. Cobb",
-            "E.G. Marshall"
-        ],
+        "actores": "Martin Balsam, John Fiedler, Lee J. Cobb, E.G. Marshall",
         "duracion": "1h 32m"
     },
     {
@@ -83,19 +53,10 @@
         "titulo_original": "N/A",
         "director": "Aditya Chopra",
         "puntuacion": 85,
-        "genero": [
-            "Drama",
-            "Comedia",
-            "Romance"
-        ],
+        "genero": "Drama, Comedia, Romance",
         "anio": 1995,
         "sinopsis": "Los Singh son una familia india con grandes convicciones culturales de su naci\u00c3\u00b3n de origen, que emigraron a Reino Unido antes de nacer sus primeros hijos. Uno de ellos querr\u00c3\u00a1 casarse con una mujer ajena a su cultura y para ello deber\u00c3\u00a1 hacer todos los esfuerzos por convencer a su familia.",
-        "actores": [
-            "Kajol",
-            "Shah Rukh Khan",
-            "Amrish Puri",
-            "Farida Jalal"
-        ],
+        "actores": "Kajol, Shah Rukh Khan, Amrish Puri, Farida Jalal",
         "duracion": "3h 9m"
     },
     {

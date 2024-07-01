@@ -22,7 +22,7 @@ while op!=0:
     elif op==2:
         crud.addPelicula(peliculas)
     elif op==3:
-        crud.modificarPeliculas(peliculas)
+        crud.updPelicula(peliculas)
     elif op==4:
         crud.delPelicula(peliculas)
     elif op==5:

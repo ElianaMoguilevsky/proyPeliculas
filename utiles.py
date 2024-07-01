@@ -84,3 +84,21 @@ def mostrarMenuBusqueda():
     opcion=int(input("Ingrese alguna opción: "))
     
     return opcion
+
+def mostrarMenuUpdPeli():
+    print("Elija el número del campo que desea modificar: ")
+    print("1- Título")
+    print("2- Título original")
+    print("3- Director")
+    print("4- Puntuación")
+    print("5- Género")
+    print("6- Año")
+    print("7- Sinopsis")
+    print("8- Actores")
+    print("9- Duración")
+    print("0- Volver al menú anterior")
+
+    # el usuario ingresa la opción desada
+    opcion=int(input("Ingrese alguna opción: "))
+    
+    return opcion

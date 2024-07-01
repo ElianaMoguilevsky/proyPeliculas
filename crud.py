@@ -100,37 +100,109 @@ def delPelicula(peliculas):
     
     utiles.mostrarFinFuncion()
 
-"""Modifica una película de la lista 
-    Al usuario se le muestra la lista de películas
-    y luego decide cual modificar.
-"""
-
-def modificarPeliculas(peliculas):
-    # limpio pantalla y muestro título
+def updPelicula(peliculas):
+     # limpio pantalla y muestro título
     utiles.limpiarPantalla()
-    utiles.mostrarSubTitulo("Listado de Películas", "-")
+    utiles.mostrarSubTitulo("Modificar Película", "-")
 
-    # listo peliculas existentes
     listarPeliculas(peliculas)
 
-    utiles.mostrarFinFuncion()
+    print("")
+    idUpd=int(input("Ingrese el Id de la película a modificar: "))
+    
+    #busco la pelicula por su id y muestro todos sus datos
+    for peli in peliculas:
+        if peli["id"]==idUpd:
+            utiles.limpiarPantalla()
+            utiles.mostrarSubTitulo("Datos existentes", "-")    
+            print("")        
+            print (f'  - Id: {peli["id"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'1 - Título: {peli["titulo"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'2 - Título original: {peli["titulo_original"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'3 - Director: {peli["director"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'4 - Género: {peli["genero"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'5 - Año: {peli["anio"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'6 - Sinopsis: {peli["sinopsis"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'7 - Actores: {peli["actores"]}')
+            utiles.mostrarLinea()
+            print("") 
+            print (f'8 - Duración: {peli["duracion"]}')
+            utiles.mostrarLinea()
+            print("") 
 
-    #selecciona y modifica el item de la lista
-    indice=int(input("Ingrese el número de la película a modificar: "))
-    peli=input("Ingrese nuevamente el nombre de la película: ")
-    peliculas[indice-1]=peli
+    #modificar los datos de la pelicula
+
+    op=utiles.mostrarMenuUpdPeli()
+    
+    if (op==1):
+        nuevoTitulo=input("Ingrese el nombre de la película: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["titulo"]=nuevoTitulo      
+    elif(op==2):
+        nuevoTituloOriginal=input("Ingrese el titulo en idioma original: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["titulo_original"]=nuevoTituloOriginal
+    elif(op==3):
+        nuevoDirector=input("Ingrese el nombre del director: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["director"]=nuevoDirector
+    elif(op==4):
+        nuevaPuntuacion=input("Ingrese la puntuacion: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["puntuacion"]=nuevaPuntuacion
+    elif(op==5):
+        nuevoGenero=input("Ingrese el género: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["genero"]=nuevoGenero
+    elif(op==6):
+        nuevoAnio=input("Ingrese el año: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["anio"]=nuevoAnio
+    elif(op==7):
+        nuevaSinopsis=input("Ingrese la sinopsis: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["sinopsis"]=nuevaSinopsis
+    elif(op==8):
+        nuevosActores=input("Ingrese los actores: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["actores"]=nuevosActores
+    elif(op==9):
+        nuevaDuracion=input("Ingrese la duracion: ")
+        for peli in peliculas:
+            if peli["id"]==idUpd:
+                peli["duracion"]=nuevaDuracion          
+
+    # agrega la pelicula recien ingresada a la lista películas
+    #peliculas.append(peli)
     fileToSave=open("peliculas.json","w")
     json.dump(peliculas, fileToSave)
     fileToSave.close()
-
-    print("")
-    print("Su película fue modificada con éxito")
-    print("")
-
-  # listo nuevamente peliculas existentes
-    listarPeliculas(peliculas) 
     
-    utiles.mostrarFinFuncion()
+    print("Su película fue modificada con éxito")
+
+    utiles.mostrarFinFuncion()    
     
 """Función que busca películas por algún campo"""
 def findPeliculas(peliculas):
@@ -157,7 +229,7 @@ def findPeliculas(peliculas):
     if op==0:
         utiles.limpiarPantalla()
         utiles.mostrarTitulo("Bienvenidos a la página de películas", "*")
-        utiles.mostrarMenuIni()     
+           
    
 def findPeliculasPorTitulo(peliculas):
     # limpio pantalla y muestro título
