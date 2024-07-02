@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "titulo": "aaa",
+        "titulo": "Cadena perpetua",
         "titulo_original": "The Shawshank Redemption",
         "director": "Frank Darabont",
         "puntuacion": 87,
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "titulo": "El Padrino",
+        "titulo": "Pepe",
         "titulo_original": "The Godfather",
         "director": "Francis Ford Coppola",
         "puntuacion": 87,
@@ -64,9 +64,9 @@
         "titulo": "Pelicula de Santi",
         "titulo_original": "Santi's Movie",
         "director": "Santi",
-        "puntuacion": "100",
+        "puntuacion": 100,
         "genero": "Comedia aventura",
-        "anio": "2025",
+        "anio": 2025,
         "sinopsis": "Muestra la vida de Santi",
         "actores": "Santi, Eliana, Leandro, Mateo y muchos m\u00e1s",
         "duracion": "1 hora"

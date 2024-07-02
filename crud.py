@@ -11,12 +11,12 @@ def listarPeliculas(peliculas):
     utiles.mostrarSubTitulo("Listado de Películas", "-")
     print(" ")
 
-    print("+------+-----------------------+------------+-------+--------------------+")
-    print("|  Pos |        Titulo         | Puntuación |  Año  |      Director      |")
-    print("+------+-----------------------+------------+-------+--------------------+")
-   
     max_ancho_titulo = max(len(peli["titulo"]) for peli in peliculas)
     max_ancho_director = max(len(peli["director"]) for peli in peliculas)
+
+    print(f'+------+{"-" * (max_ancho_titulo + 2)}+------------+------------+{"-" * (max_ancho_director + 2)}+')
+    print(f'|  Pos | {"Titulo".center(max_ancho_titulo)} | Puntuación |     Año    | {"Director".center(max_ancho_director)} |')
+    print(f'+------+{"-" * (max_ancho_titulo + 2)}+------------+------------+{"-" * (max_ancho_director + 2)}+')
 
     for i, peli in enumerate(peliculas):
         print(f'| {str(i+1):4} | {peli["titulo"]:{max_ancho_titulo}} | {peli["puntuacion"]:10} | {peli["anio"]:10} | {peli["director"]:{max_ancho_director}} |')
@@ -39,9 +39,9 @@ def addPelicula(peliculas):
     titulo=input("Ingrese el nombre de la película: ")
     titulo_original=input("Ingrese el titulo en idioma original: ")
     director=input("Ingrese el nombre del director: ")
-    puntuacion=input("Ingrese la puntuacion: ")
+    puntuacion=int(input("Ingrese la puntuacion: "))
     genero=input("Ingrese el género: ")
-    anio=input("Ingrese el año: ")
+    anio=int(input("Ingrese el año: "))
     sinopsis=input("Ingrese la sinopsis: ")
     actores=input("Ingrese los actores: ")
     duracion=input("Ingrese la duracion: ")
@@ -164,7 +164,7 @@ def updPelicula(peliculas):
             if peli["id"]==idUpd:
                 peli["director"]=nuevoDirector
     elif(op==4):
-        nuevaPuntuacion=input("Ingrese la puntuacion: ")
+        nuevaPuntuacion=int(input("Ingrese la puntuacion: "))
         for peli in peliculas:
             if peli["id"]==idUpd:
                 peli["puntuacion"]=nuevaPuntuacion
@@ -174,7 +174,7 @@ def updPelicula(peliculas):
             if peli["id"]==idUpd:
                 peli["genero"]=nuevoGenero
     elif(op==6):
-        nuevoAnio=input("Ingrese el año: ")
+        nuevoAnio=int(input("Ingrese el año: "))
         for peli in peliculas:
             if peli["id"]==idUpd:
                 peli["anio"]=nuevoAnio
@@ -195,7 +195,7 @@ def updPelicula(peliculas):
                 peli["duracion"]=nuevaDuracion          
 
     # agrega la pelicula recien ingresada a la lista películas
-    #peliculas.append(peli)
+    
     fileToSave=open("peliculas.json","w")
     json.dump(peliculas, fileToSave)
     fileToSave.close()
